@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class NameController {
 
-    @GetMapping(value = "/hello/{firstName}/{lastName}")
+    @GetMapping(value = "/hello/{firstName}/{lastName}",produces = "text/plain;charset=UTF-8")
     @ResponseBody
     private String hello(@PathVariable("firstName") String firstName,
                          @PathVariable("lastName") String lastName){
